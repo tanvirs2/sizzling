@@ -1,0 +1,15 @@
+{
+    "name": "tanvir/sizzling",
+    "description": "simple restaurant project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tanvir Sarker",
+            "email": "tanvir603@gmail.com"
+        }
+    ],
+    "require": {
+        "larapack/dd": "^1.1"
+    }
+}

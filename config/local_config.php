@@ -11,7 +11,7 @@ if ($domain == 'beautypointbd.com') {
     $config['DB_HOST'] = 'localhost';
     $config['DB_NAME'] = 'beautypointbd_sizzling';
     $config['DB_USER'] = 'beautypointbd_sizzling';
-    $config['DB_PASSWORD'] = 'nHv?@(al0l1&';
+    $config['DB_PASSWORD'] = '';
 } else {
     $config['SITE_NAME'] = 'SIZZLING';
     $config['ADMIN_SITE_NAME'] = 'SIZZLING | ADMIN PANEL';
@@ -19,7 +19,7 @@ if ($domain == 'beautypointbd.com') {
     $config['ROOT_DIR'] = '/sizzling/';
     $config['DB_TYPE'] = 'mysql';
     $config['DB_HOST'] = 'localhost';
-    $config['DB_NAME'] = 'sizzling';
+    $config['DB_NAME'] = 'beautypointbd_sizzling';
     $config['DB_USER'] = 'root';
     $config['DB_PASSWORD'] = '';
 }

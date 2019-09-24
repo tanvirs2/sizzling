@@ -148,7 +148,7 @@ include './config/config.php';
                             $resultGetProductCategory = mysqli_query($con, $sqlGetProductCategory);
                             ?>
                             <button data-filter="*"  class="is-checked">All</button>
-                            <?php if (count($resultGetProductCategory) > 0): ?>
+                            <?php if (is_array($resultGetProductCategory) and count($resultGetProductCategory) > 0): ?>
                                 <?php while ($objProductCategory = mysqli_fetch_object($resultGetProductCategory)): ?>
                                     <button data-filter=".cat--<?php echo $objProductCategory->product_category_id; ?>"><?php echo $objProductCategory->product_category_name; ?></button>
                                 <?php endwhile; ?>
@@ -190,7 +190,7 @@ include './config/config.php';
                                         <div class="product__details">
                                             <h2><a href="products?name=<?php echo $objP->product_title; ?>"><?php echo $objP->product_title; ?></a></h2>
                                             <ul class="product__price">
-                                                <?php if($objP->product_old_price != '0.00') : ?>
+                                                <?php if(isset($objP->product_old_price) and $objP->product_old_price != '0.00') : ?>
                                                     <li class="old__price">৳<?php echo $objP->product_new_price; ?></li>
                                                     <li class="new__price">৳<?php echo $objP->product_old_price; ?></li>
                                                 <?php else: ?>
