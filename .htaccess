@@ -1,0 +1,6 @@
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+#RewriteRule ^item/(.*)$ category.php?id=$1
+ RewriteRule ^item/([a-zA-Z0-9]+)$ /products.php?name=$1
