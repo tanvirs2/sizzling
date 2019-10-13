@@ -2,9 +2,191 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ef31a6-83a9-4047-96c1-7d190c837e8a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sizzling.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sizzling.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/about-us.php" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/header_script.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header_script.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/ClassMyCommonFunctions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/editor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/imagebrowser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/indeterminate.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/loading-image.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/loading_2x.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/slider-h.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/slider-v.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/Metro/sprite_2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/kendo.common.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/kendo.metro.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/brushed-metal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/dots9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/glass-lighter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/highlight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/hsv-gradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/hue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/leather1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/leather2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/noise.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/stripe1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/stripe2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/stripe3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/stripe4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/stripe5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/stripe6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/transparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/css/textures/transtexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/resources/kendo/js/kendo.web.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/side_menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/side_menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/banner/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/banner/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/brand/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/contact/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/contact/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/order/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/order/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/order/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/order/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/order/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/lib/Tinify.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/lib/Tinify/Client.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/lib/Tinify/Exception.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/lib/Tinify/Result.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/lib/Tinify/ResultMeta.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/lib/Tinify/Source.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/lib/data/cacert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product_category/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product_category/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product_collection/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/product_collection/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/ajaxChngCartQnty.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/ajaxChngCartQnty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/delItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/delItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all-products.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/checkout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collection.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/local_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/local_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/sql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/zebra_image.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-us.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact-us.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/core.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/animate-slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/slick.eot_%23iefix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/themify.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/themify.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/themify.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/fonts/themify.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/images/ui-icons_444444_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/images/ui-icons_555555_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/images/ui-icons_777620_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/images/ui-icons_777777_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/images/ui-icons_cc0000_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/images/ui-icons_ffffff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/magnific-popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/meanmenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plugins/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shortcode/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shortcode/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shortcode/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shortcode/shortcodes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shortcode/slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/themify-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/sizzling_04-08-19.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer_script.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer_script.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header_script.php" beforeDir="false" afterPath="$PROJECT_DIR$/header_script.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/FB-Meta-Image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bg/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bg/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bg/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bg/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bg/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brand/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brand/Brand-17-KM-Jewelry.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brand/Brand-Curren.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brand/Brand-Inalis.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brand/Brand-MVMT.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brand/Brand-Naviforce.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brand/Brand-Sinobi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brand/Brand-Tissot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/brand/Brand-Xenlex.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/close-20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/select-option.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/send-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/send.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/no-image-available.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/product/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/s3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/team/1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/custom_script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vendor/jquery-1.12.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vendor/modernizr-2.8.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login-register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-orders.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/privacy-policy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/terms-and-conditions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/PI20190106134827.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/banner/Fashion-Jewellery-Collection.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/banner/Fashionable-Womens-Bag-Collection.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/product_image/Sizzling-20190804150711.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/product_image_compressed/Black-with-Red-Bo-tie-Design-Ladies-Side-Bag-20190708145238.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/product_image_compressed/Sizzling-20190804150711.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +194,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
@@ -20,8 +203,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/larapack/dd" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1RGr8CWe4SQPVStK77XhuXJVV45" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -54,6 +247,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569304111882</updated>
       <workItem from="1569304113127" duration="3450000" />
+      <workItem from="1569308049870" duration="962000" />
     </task>
     <servers />
   </component>
@@ -65,7 +259,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

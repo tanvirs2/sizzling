@@ -20,7 +20,7 @@ if (isset($_POST['DeleteContact'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact List | AANGON</title>
+    <title>Contact List | <?php echo $config['ADMIN_SITE_NAME']; ?></title>
     <?php include basePath('admin/header_script.php'); ?>
 </head>
 <body class="skin-blue">

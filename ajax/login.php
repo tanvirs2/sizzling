@@ -14,7 +14,7 @@ $login_user_password = validateInput($login_user_password);
 if ($login_user_mobile !== '' && $login_user_password !== '') {
     $login_user_password = securedPass($login_user_password);
 
-    $checkUserSql = "SELECT * FROM tbl_user WHERE user_mobile = '$login_user_mobile' AND user_password = '$login_user_password'";
+    $checkUserSql = "SELECT * FROM tbl_user WHERE user_email = '$login_user_mobile' AND user_password = '$login_user_password'";
     $checkUserResult = mysqli_query($con, $checkUserSql);
     $countUserLogin = mysqli_num_rows($checkUserResult);
     if ($countUserLogin > 0) {

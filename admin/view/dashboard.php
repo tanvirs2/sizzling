@@ -1,5 +1,6 @@
 <?php
 include "../../config/config.php";
+//session_start();
 $countCategory = '';
 $sqlCategory = "SELECT COUNT(*) AS totalCategory FROM tbl_product_category WHERE product_category_status='Active'";
 $resulCategory = mysqli_query($con, $sqlCategory);
@@ -34,7 +35,7 @@ if ($resultOrder) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dashboard | <?php echo $config['ADMIN_SITE_NAME']; ?></title>
+    <title>Dashboard | AANGON</title>
     <?php include basePath('admin/header_script.php'); ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -61,22 +62,22 @@ if ($resultOrder) {
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-4 col-sm-8 col-xs-12">
-                                        <a href="<?php echo baseUrl('admin/view/product/list.php'); ?>">
+                                        <a href="<?php echo baseUrl('admin/view/menu/list.php'); ?>">
                                             <div class="info-box">
                                                 <span class="info-box-icon bg-green"><i class="fa fa-cart-plus"></i></span>
                                                 <div class="info-box-content">
-                                                    <span class="info-box-text">Total Products</span>
+                                                    <span class="info-box-text">Total Online Order Menu</span>
                                                     <span class="info-box-number"><?php echo $countProduct; ?></span>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col-md-4 col-sm-8 col-xs-12">
-                                        <a href="<?php echo baseUrl('admin/view/product_category/index.php'); ?>">
+                                        <a href="<?php echo baseUrl('admin/view/menu_category/index.php'); ?>">
                                             <div class="info-box">
                                                 <span class="info-box-icon bg-aqua"><i class="fa fa-cube"></i></span>
                                                 <div class="info-box-content">
-                                                    <span class="info-box-text">Total Product Category</span>
+                                                    <span class="info-box-text">Total Online Order Menu Category</span>
                                                     <span class="info-box-number"><?php echo $countCategory; ?></span>
                                                 </div>
                                             </div>

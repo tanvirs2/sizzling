@@ -1,160 +1,91 @@
-<?php
-$subTotal = 0;
-$arrayTempCart = array();
-$sqlTempCart = "SELECT tbl_temp_order.*,tbl_product.*"
-    . " FROM tbl_temp_order"
-    . " LEFT JOIN tbl_product ON tbl_temp_order.temp_order_product_id = tbl_product.product_id"
-    . " WHERE temp_order_session_id='" . session_id() . "'";
-$resultTempCart = mysqli_query($con, $sqlTempCart);
-if ($resultTempCart) {
-    while ($objTempCart = mysqli_fetch_object($resultTempCart)) {
-        $arrayTempCart[] = $objTempCart;
-        $subTotal += ($objTempCart->temp_order_product_price * $objTempCart->temp_order_product_qty);
-    }
-}
-//debug($arrayTempCart);
-?>
-<header id="header" class="htc-header">
-    <!-- Start Mainmenu Area -->
-    <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
-                    <div class="logo">
-                        <a href="index">
-                            <img src="images/s3.png" alt="<?php echo $config['SITE_NAME']; ?>">
-                        </a>
+<header id="masthead" class="site-header">
+    <div id="header-1" class="header-area header-fixed " style="top: 0px;">
+        <div id="tophead" class="header-top-bar align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="tophead-contact">
+                            <ul>
+                                <li>
+                                    <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+44 20 8590 4858">+44 20 8590 4858</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:71sizzling@gmail.com">71sizzling@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tophead-right tophead-address">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i><span> 71, Chadwell heath lane, Romford, United Kingdom</span>
+                        </div>
+                        <div class="clear"></div>
                     </div>
                 </div>
-                <!-- Start Mainmenu Ares -->
-                <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6">
-                    <nav class="mainmenu__nav hidden-xs hidden-sm">
-                        <ul class="main__menu">
-                            <li><a href="index">Home</a></li>
-                            <li class="drop"><a href="#">Products</a>
-                                <ul class="dropdown">
-                                    <?php foreach ($arrayCategory AS $category): ?>
-                                        <?php $cat_name = $category->product_category_name;
-                                        $name = str_replace(' ', '-', $cat_name);
-                                        ?>
-                                        <li><a href="category?name=<?php echo $name; ?>"><?php echo $category->product_category_name; ?></a></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </li>
-                            <li class="drop"><a href="#">Collections</a>
-                                <ul class="dropdown">
-                                    <?php foreach ($arrayCollection AS $collection): ?>
-                                        <li><a href="collection?id=<?php echo $collection->product_category_id; ?>"><?php echo $collection->product_category_name; ?></a></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </li>
-                            <li><a href="about-us">About Us</a></li>
-                            <li><a href="contact-us">Contact Us</a></li>
-                        </ul>
-                    </nav>
-                    <div class="mobile-menu clearfix visible-xs visible-sm">
-                        <nav id="mobile_dropdown">
-                            <ul>
-                                <li><a href="index">Home</a></li>
-                                <li><a href="#">Products</a>
-                                    <ul>
-                                        <?php foreach ($arrayCategory AS $category): ?>
-                                            <li><a href="category?name=<?php echo $category->product_category_id; ?>"><?php echo $category->product_category_name; ?></a></li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Collections</a>
-                                    <ul>
-                                        <?php foreach ($arrayCollection AS $collection): ?>
-                                            <li><a href="collection?id=<?php echo $collection->product_category_id; ?>"><?php echo $collection->product_category_name; ?></a></li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </li>
-                                <li><a href="about-us">About Us</a></li>
-                                <li><a href="contact-us">Reach Us</a></li>
+            </div>
+        </div>
+        <div class="container masthead-container" id="sticker">
+            <div class="row">
+                <div class="col-sm-2 col-xs-12">
+                    <div class="site-branding">
+                        <a class="dark-logo" href="index.php"><img src="assets/img/sizzling-logo.png" alt="<?php echo $config['SITE_NAME'] = 'SIZZLING'; ?>"></a>
+                        <a class="light-logo" href="index.php"><img src="assets/img/sizzling-logo.png" alt="<?php echo $config['SITE_NAME'] = 'SIZZLING'; ?>"></a>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-xs-12">
+                    <?php
+                    $arr1 = array();
+                    $sql1 = "SELECT * FROM tbl_product_category WHERE product_category_parent_id=0";
+                    $res1 = mysqli_query($con, $sql1);
+                    ?>
+                    <div id="site-navigation" class="main-navigation">
+                        <nav class="menu-main-menu-container">
+                            <ul id="menu-main-menu" class="menu">
+                                <li id="menu-item-3067" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3067"><a href="index.php">Home</a></li>
+                                <li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-320 menu-item-460">
+                                    <a href="about-us.php">About</a></li>
+<!--                                <li id="menu-item-3113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3113"><a href="#">Menu</a>-->
+<!--                                    <ul class="sub-menu">-->
+<!--                                        <li><a href="christmas-menu.php">Christmas Menu</a></li>-->
+<!--                                        <li><a href="ala-carte.php">Ala Carte</a></li>-->
+<!--                                        <li><a href="valentine-menu.php">Valentine Menu</a></li>-->
+<!--                                        <li><a href="allergen-chart.php">Allergen Chart</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+                                <li id="menu-item-3264" class="menu-item"><a href="order-online.php">Order online</a></li>
+                                <li id="menu-item-3116" class="menu-item"><a href="gallery.php">Gallery</a></li>
+                                <!--                                <li id="menu-item-451" class="menu-item"><a href="reservation.php">Reservation</a></li>-->
+                                <li id="menu-item-2399" class="menu-item"><a href="contact-us.php">Contact</a></li>
+                                <?php if (checkUserLogin()): ?>
+                                    <li id="menu-item-3113" class="menu-item"><a href="dashboard.php"><i class="fa fa-user"></i><?php echo getSession("user_name"); ?></a>
+                                    </li>
+                                <?php else: ?>
+                                    <li id="menu-item-3113" class="menu-item menu-item-has-children"><a href="#"><i class="fa fa-user"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                                            <li><a href="registration.php">Registration</a></li>
+                                        </ul>
+                                    </li>
+                                <?php endif; ?>
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <!-- End MAinmenu Ares -->
-                <div class="col-md-4 col-sm-4 col-xs-3">
-                    <ul class="menu-extra">
-                        <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
-                        <?php if (getSession("user_name") != ''): ?>
-                            <li><a href="dashboard"><span class="ti-user"></span><?php echo getSession("user_name"); ?></a></li>
-                        <?php else: ?>
-                            <li><a href="login-register"><span class="ti-user"></span><?php echo getSession("user_name"); ?></a></li>
-                        <?php endif; ?>
-                        <li class="cart__menu"><span class="ti-shopping-cart"></span><sup><b><?php echo count($arrayTempCart);?></b></sup></li>
-                    </ul>
-                </div>
             </div>
-            <div class="mobile-menu-area"></div>
         </div>
     </div>
-    <!-- End Mainmenu Area -->
 </header>
-<div class="body__overlay"></div>
-<!-- Start Offset Wrapper -->
-<div class="offset__wrapper">
-    <!-- Start Search Popap -->
-    <div class="search__area">
-        <div class="container" >
-            <div class="row" >
-                <div class="col-md-12" >
-                    <div class="search__inner">
-                        <form action="#">
-                            <input placeholder="Search here... " type="text">
-                            <button type="button"></button>
-                        </form>
-                        <div class="search__close__btn">
-                            <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
-                        </div>
-                    </div>
-                </div>
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Login to Your Account</h1><br>
+            <form id="login-form" method="POST" action="">
+                <input type="text" name="login_user_mobile" id="login_user_mobile" placeholder="Your Email Address" required="required">
+                <input type="password" name="login_user_password" id="login_user_password" placeholder="Your Password" required="required">
+                <button name="btnLogin" class="btn btn-block btn-lg btn-primary btn-login btn-send-message" type="button" return="false" id="btnLogin">Login</button>
+            </form>
+            <div class="login-help">
+                <a href="registration.php">Register</a> - <a href="#">Forgot Password</a>
             </div>
-        </div>
-    </div>
-    <div class="shopping__cart">
-        <div class="shopping__cart__inner">
-            <div class="offsetmenu__close__btn">
-                <a href="#"><i class="zmdi zmdi-close"></i></a>
-            </div>
-            <?php if (count($arrayTempCart) > 0): ?>
-                <div class="shp__cart__wrap">
-                    <?php foreach ($arrayTempCart AS $TempCart): ?>
-                        <div class="shp__single__product">
-                            <div class="shp__pro__thumb">
-                                <a href="#">
-                                    <img src="<?php echo baseUrl(); ?>upload/product_image/<?php echo $TempCart->product_image; ?>" alt="<?php echo $TempCart->product_title; ?>" onerror="this.src='images/no-image-available.jpg';">
-                                </a>
-                            </div>
-                            <div class="shp__pro__details">
-                                <h2><a href="product-details?id=<?php echo $TempCart->product_id; ?>"><?php echo $TempCart->product_title; ?></a></h2>
-                                <span class="quantity">QTY: <?php echo $TempCart->temp_order_product_qty; ?></span>
-                                <span class="shp__price">৳<?php echo $TempCart->temp_order_product_price; ?></span>
-                            </div>
-                            <div class="remove__btn">
-                                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php else: ?>
-                <div class="shp__cart__wrap">
-                    <div class="shp__single__product">
-                        <p>Your cart is empty. Start shopping now!</p>
-                    </div>
-                </div>
-            <?php endif; ?>
-            <ul class="shoping__total">
-                <li class="subtotal">Subtotal:</li>
-                <li class="total__price">৳ <?php echo number_format($subTotal, 2); ?></li>
-            </ul>
-            <ul class="shopping__btn">
-                <li><a href="cart">View Cart</a></li>
-                <li class="shp__checkout"><a href="checkout">Checkout</a></li>
-            </ul>
         </div>
     </div>
 </div>
+<div class="se-pre-con"></div>

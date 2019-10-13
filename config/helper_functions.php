@@ -36,6 +36,7 @@ function securedPass($pass = '') {
         } else {
             $security_code = '';
         }
+        //
         $start = floor($length / 2);
         $search = substr($pass, 1, $start);
         $secur_password = str_replace($search, $search . $security_code, $pass);

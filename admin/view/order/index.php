@@ -21,7 +21,7 @@ if (isset($_POST['DeleteOrder'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EIGHTEEN ADMIN | Order List</title>
+    <title><?php echo $config['ADMIN_SITE_NAME']; ?> | View Order List</title>
     <?php include basePath('admin/header_script.php'); ?>
 </head>
 <body class="skin-blue">
@@ -41,12 +41,11 @@ if (isset($_POST['DeleteOrder'])) {
                                     <table class="table table-bordered table-striped table-responsive">
                                         <thead style="background-color: #E4E3E2;">
                                         <tr>
-                                            <th style="width: 15%">Ordered by</th>
-                                            <th style="width: 3%">Quantity</th>
-                                            <th style="width: 5%">Amount</th>
+                                            <th style="width: 10%">Ordered by</th>
+                                            <th style="width: 5%">Quantity</th>
+                                            <th style="width: 10%">Amount</th>
                                             <th style="width: 10%">Tracking No</th>
-<!--                                            <th style="width: 10%">Pay. Method</th>-->
-                                            <th style="width: 10%">Date</th>
+                                            <th style="width: 15%">Date</th>
                                             <th style="width: 10%">Status</th>
                                             <th style="width: 20%">Action</th>
                                         </tr>
@@ -58,7 +57,7 @@ if (isset($_POST['DeleteOrder'])) {
                                         $result = mysqli_query($con, $sql);
                                         $total = mysqli_num_rows($result);
                                         $adjacents = 6;
-                                        $targetpage = "list.php";
+                                        $targetpage = "index.php";
                                         $limit = $config['PAGE_LIMIT'];
                                         if (isset($_GET['page'])) {
                                             $page = $_GET['page'];
@@ -149,8 +148,8 @@ if (isset($_POST['DeleteOrder'])) {
                                         <?php if ($total > 0): ?>
                                             <?php while ($obj = mysqli_fetch_object($resultList)): ?>
                                                 <tr>
-                                                    <?php if ($obj->order_user_id !== '0'): ?>
-                                                        <td style="width: 15%;"><?php echo $obj->order_phone; ?></td>
+                                                    <?php if ($obj->order_user_id == '0'): ?>
+                                                        <td style="width: 10%;"><?php echo $obj->order_phone; ?></td>
                                                     <?php else: ?>
                                                         <?php
                                                         $sqlGetUser = "SELECT user_id,user_name,user_mobile FROM tbl_user WHERE user_id= $obj->order_user_id";
@@ -159,39 +158,37 @@ if (isset($_POST['DeleteOrder'])) {
                                                             $objUser = mysqli_fetch_object($resultGetUser);
                                                         }
                                                         ?>
-                                                        <td style="width: 15%;"><?php echo $obj->order_name; ?> (<?php echo $obj->order_phone; ?>)</td>
+                                                        <td style="width: 10%;"><?php echo $objUser->user_name; ?> (<?php echo $objUser->user_mobile; ?>)</td>
                                                     <?php endif; ?>
-                                                    <td style="width: 3%;"><?php echo $obj->order_total_quantity; ?></td>
-                                                    <td style="width: 5%;"><?php echo $obj->order_amount; ?></td>
+                                                    <?php $countQuantity = '';
+                                                    $sqlQuantity = "SELECT SUM(order_details_product_quantity) AS totalQuantity FROM tbl_order_details WHERE order_details_order_id='$obj->order_id'";
+                                                    $resulQuantity = mysqli_query($con, $sqlQuantity);
+                                                    if ($resulQuantity) {
+                                                        $objQuantity = mysqli_fetch_object($resulQuantity);
+                                                        $countQuantity = $objQuantity->totalQuantity;
+                                                    }
+                                                    ?>
+                                                    <td style="width: 5%;"><?php echo $countQuantity; ?></td>
+                                                    <td style="width: 10%;">£<?php echo $obj->order_amount; ?></td>
                                                     <td style="width: 10%;"><?php echo $obj->order_track_no; ?></td>
-<!--                                                    <td style="width: 10%;">--><?php //echo $obj->order_payment_method; ?><!--</td>-->
                                                     <?php
                                                     $time = strtotime($obj->order_created_on);
                                                     $myFormatForView = date("d-M-y g:i A", $time);
                                                     ?>
-                                                    <td style="width: 10%;"><?php echo $myFormatForView; ?></td>
+                                                    <td style="width: 15%;"><?php echo $myFormatForView; ?></td>
                                                     <td style="width: 10%;">
                                                         <?php if ($obj->order_status == 'Received'): ?>
-                                                            <label class="label label-danger"><?php echo $obj->order_status; ?></label>
-                                                        <?php elseif ($obj->order_status == 'Processing'): ?>
                                                             <label class="label label-warning"><?php echo $obj->order_status; ?></label>
-                                                        <?php elseif ($obj->order_status == 'Shipped'): ?>
-                                                            <label class="label label-primary"><?php echo $obj->order_status; ?></label>
-                                                        <?php elseif ($obj->order_status == 'Delivered'): ?>
-                                                            <label class="label label-success"><?php echo $obj->order_status; ?></label>
                                                         <?php else: ?>
                                                             <label class="label label-danger"><?php echo $obj->order_status; ?></label>
                                                         <?php endif; ?>
                                                     </td>
                                                     <td style="width: 20%;">
                                                         <a href="<?php echo baseUrl('admin/view/order/view.php?id='); ?><?php echo $obj->order_id; ?>">
-                                                            <button class="btn btn-warning btn-sm"><i class="fa fa-eye"></i></button>
-                                                        </a>
-                                                        <a href="<?php echo baseUrl('admin/view/order/edit.php?id='); ?><?php echo $obj->order_id; ?>">
-                                                            <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i></button>
+                                                            <button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i>&nbsp;View</button>
                                                         </a>
                                                         <a href="javascript:void(0);">
-                                                            <button class="btn btn-danger btn-sm" data-toggle="modal" type="button" data-target="#deleteModal<?php echo $obj->order_id; ?>"><i class="fa fa-trash-o"></i></button>
+                                                            <button class="btn btn-danger btn-sm" data-toggle="modal" type="button" data-target="#deleteModal<?php echo $obj->order_id; ?>"><i class="fa fa-trash-o"></i>&nbsp;Delete</button>
                                                         </a>
                                                     </td>
                                                 </tr>

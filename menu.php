@@ -1,0 +1,1187 @@
+<?php
+include './config/config.php';
+if (isset($_GET['id'])) {
+    $product_category = $_GET['id'];
+}
+?>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu Items &#8211; Sizzling</title>
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/meanmenu.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/default.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/vc.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/mp-restaurant-menu.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/js_composer.min.css' type='text/css' media='all' />
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <style id='redchili-responsive-inline-css' type='text/css'>
+        ul#cat_nav, ul.additional_links, ul.list_ok, ul.opening_list {
+            list-style: none;
+        }
+        blockquote {
+            border-color: #e7272d;
+        }
+
+        #tophead .tophead-contact .fa,
+        #tophead .tophead-address .fa,
+        #tophead .tophead-social li a:hover {
+            color: #e7272d;
+        }
+        #tophead {
+            background-color: #222222;
+        }
+        #tophead,
+        #tophead a,
+        #tophead .tophead-social li a {
+            color: #a6b1b7;
+        }
+        .trheader #tophead,
+        .trheader #tophead a,
+        .trheader #tophead .tophead-social li a {
+            color: #efefef;
+        }
+
+        .site-header .main-navigation ul li a {
+            font-family: Oswald, sans-serif;
+            font-size : 15px;
+            font-weight : 400;
+            line-height : 24px;
+            color: #000000;
+            font-style: normal;
+            letter-spacing : 1px;
+            text-transform : uppercase;
+        }
+        .site-header .main-navigation ul.menu > li > a:hover,
+        .site-header .main-navigation ul.menu > li.current-menu-item > a,
+        .site-header .main-navigation ul.menu > li.current > a,
+        .trheader.non-stick .site-header .main-navigation ul.menu > li > a:hover,
+        .trheader.non-stick .site-header .main-navigation ul.menu > li.current-menu-item > a,
+        .trheader.non-stick .site-header .main-navigation ul.menu > li.current > a {
+            color: #eeee22;
+        }
+        .site-header .main-navigation ul li a.active {
+            color: #eeee22 !important;
+        }
+        .trheader.non-stick .site-header .main-navigation ul.menu > li > a,
+        .trheader.non-stick .site-header .search-box .search-button i,
+        .trheader.non-stick .header-icon-seperator,
+        .trheader.non-stick .header-icon-area .cart-icon-area > a,
+        .trheader.non-stick .additional-menu-area a.side-menu-trigger {
+            color: #ffffff;
+        }
+        .bottomBorder {
+            border-bottom: 2px solid #e7272d;
+        }
+        .site-header .main-navigation ul li ul li {
+            background-color: #e7272d;
+        }
+        .site-header .main-navigation ul li ul li:hover {
+            background-color: #e7272d;
+        }
+        .site-header .main-navigation ul li ul li a {
+            font-family: Oswald, sans-serif;
+            font-size : 14px;
+            font-weight : 400;
+            line-height : 21px;
+            color: #ffffff;
+            font-style: normal;
+            letter-spacing : 1px;
+            text-transform : uppercase;
+        }
+        .site-header .main-navigation ul li ul li:hover > a {
+            color: #071041;
+        }
+        .stick .site-header {
+            border-color: #e7272d}
+        .site-header .main-navigation ul li.mega-menu > ul.sub-menu {
+            background-color: #e7272d}
+        .site-header .main-navigation ul li.mega-menu ul.sub-menu li a {
+            color: #ffffff}
+        .site-header .main-navigation ul li.mega-menu ul.sub-menu li a:hover {
+            background-color: #e7272d;
+            color: #071041;
+        }
+        .mean-container a.meanmenu-reveal,
+        .mean-container .mean-nav ul li a.mean-expand {
+            color: #eeee22;
+        }
+        .mean-container a.meanmenu-reveal span {
+            background-color: #eeee22;
+        }
+        .mean-container .mean-bar {
+            border-color: #eeee22;
+        }
+        .mean-container .mean-nav ul li a {
+            font-family: Oswald, sans-serif;
+            font-size : 14px;
+            font-weight : 400;
+            line-height : 21px;
+            color: #000000;
+            font-style: normal;
+        }
+        .mean-container .mean-nav ul li a:hover,
+        .mean-container .mean-nav > ul > li.current-menu-item > a {
+            color: #eeee22;
+        }
+
+        .header-icon-area .cart-icon-area .cart-icon-num {
+            background-color: #eeee22;
+        }
+        .additional-menu-area a.side-menu-trigger:hover,
+        .trheader.non-stick .additional-menu-area a.side-menu-trigger:hover {
+            color: #eeee22;
+        }
+        .site-header .search-box .search-text {
+            border-color: #eeee22;
+        }
+
+        .header-style-3 .header-contact .fa,
+        .header-style-3 .header-social li a:hover,
+        .header-style-3.trheader .header-social li a:hover {
+            color: #eeee22;
+        }
+        .header-style-3.trheader .header-contact li a,
+        .header-style-3.trheader .header-social li a {
+            color: #ffffff;
+        }
+
+        .header-style-4 .header-contact .fa,
+        .header-style-4 .header-social li a:hover,
+        .header-style-4.trheader .header-social li a:hover {
+            color: #eeee22;
+        }
+        .header-style-4.trheader .header-contact li a,
+        .header-style-4.trheader .header-social li a {
+            color: #ffffff;
+        }
+
+        .header-style-5 .header-menu-btn {
+            background-color: #e7272d;
+        }
+        .trheader.non-stick.header-style-5 .header-menu-btn {
+            color: #ffffff;
+        }
+
+        a:link,
+        a:visited,
+        #tophead .tophead-contact .fa,
+        #tophead .tophead-social li a:hover,
+        .cart-icon-products .widget_shopping_cart .mini_cart_item a:hover,
+        .entry-summary h3 a:hover,
+        .entry-summary h3 a:active,
+        .entry-header-single .entry-meta ul li .fa,
+        .class-footer ul li .fa,
+        .comments-area .main-comments .comments-body .replay-area a:hover,
+        .comments-area .main-comments .comments-body .replay-area a i,
+        #respond form .btn-send,
+        .widget_redchili_about ul li a:hover,
+        .widget_redchili_address ul li i,
+        .widget_redchili_address ul li a:hover,
+        .widget_redchili_address ul li a:active,
+        .sidebar-widget-area ul li a:hover,
+        .sidebar-widget-area .widget_redchili_address ul li a:hover,
+        .sidebar-widget-area .widget_redchili_address ul li a:active,
+        .wpcf7 label.control-label .fa,
+        .rdtheme-primary-color,
+        .redchili-primary-color{
+            color: #e7272d;
+        }
+        .site-header .search-box .search-button i,
+        .scrollToTop:after {
+            color: #e7272d !important;
+        }
+        .header-icon-area .cart-icon-area .cart-icon-num,
+        button,
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        .breadcrumb-area .entry-breadcrumb,
+        .entry-header .entry-meta,
+        .vc-post-slider .date,
+        .entry-summary a.read-more:hover,
+        .entry-summary a.read-more:active,
+        #respond form .btn-send:hover,
+        .widget_redchili_about ul li a,
+        .search-form .custom-search-input button.btn,
+        .sidebar-widget-area .widget h3:after,
+        .error-page-area .error-page-message .home-page a,
+        .rdtheme-button-1 a:hover,
+        .wpcf7 .submit-button,
+        .rdtheme-primary-bgcolor,
+        .redchili-primary-bgcolor{
+            background-color: #e7272d;
+        }
+        .widget .tagcloud a:hover {
+            border: 1px solid #e7272d;
+            background-color: #e7272d;
+        }
+        blockquote,
+        .stick,
+        .site-header .search-box .search-text,
+        .scrollToTop,
+        .entry-summary a.read-more:link,
+        .entry-summary a.read-more:visited,
+        #respond form .btn-send, {
+            border-color: #e7272d;
+        }
+        .infobox-style2 i{
+            color: #e7272d;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #d32f2f;
+        }
+        .search-form .custom-search-input button.btn:hover,
+        .widget .tagcloud a:hover {
+            background-color: #d32f2f;
+        }
+        .inner-page-banner-area .pagination-area h1{
+            color: #ffffff;
+        }
+        .entry-banner .entry-banner-content h1 {
+            color: #ffffff;
+        }
+        .inner-page-banner-area .pagination-area .redchili-pagination span a {
+            color: #efefef;
+        }
+        .inner-page-banner-area .pagination-area .redchili-pagination span a:hover {
+            color: #ffffff;
+        }
+        .inner-page-banner-area .pagination-area .redchili-pagination{
+            color: #efefef;
+        }
+        .inner-page-banner-area .pagination-area .redchili-pagination > span:last-child {
+            color: #e7272d;
+        }
+        .fmp-load-more button{
+            border: 2px solid #e7272d !important;
+            color: #e7272d !important;
+        }
+        .fmp-utility .fmp-load-more button:hover{
+            background-color:#e7272d !important;
+            color: #ffffff !important;
+            border: 2px solid #e7272d !important;
+        }
+        .pagination-area ul li.active a,
+        .pagination-area ul li a:hover,
+        .pagination-area ul li .current {
+            background-color: #e7272d;
+            border-color: #e7272d;
+        }
+        .pagination-area ul li a,
+        .pagination-area ul li span {
+            border: 1px solid #e7272d;
+        }
+        .footer-area-top {
+            background-color: #151515;
+        }
+        .footer-area-top,
+        .footer-area-top .widget h4 a,
+        .footer-area-top .opening-schedule li,
+        .footer-area-top .widget li a,
+        .footer-area-top .widget .tagcloud a{
+            color: #d7d7d7;
+        }
+        .footer-area-top .widget h3 {
+            color: #ffffff;
+        }
+        .footer-area-top .textwidget a:hover,
+        .footer-area-top .widget a:hover,
+        .footer-area-bottom p a:hover,
+        .footer-area-top .widget li a:hover{
+            color: #e7272d;
+        }
+        .footer-area-bottom{
+            background-color: #e7272d;
+        }
+        .footer-area-bottom p,
+        .footer-area-bottom p a{
+            color: #ffffff;
+        }
+        .footer-area-top .footer-social li a {
+            background: #e7272d;
+        }
+        .footer-area-top .footer-social li a:hover i{
+            color: #e7272d;
+        }
+
+        .rc-sidebar h4 a:hover{
+            color: #e7272d;
+        }
+        .widget ul li a i,
+        .widget_categories ul li a i,
+        .categories ul li a i,
+        .widget ul li::before,
+        .widget ul li a:hover,
+        .widget_categories ul li a:hover,
+        .archives ul li a:hover,
+        .widget_archive ul li a:hover,
+        .categories ul li a:hover
+        .archives ul li span span,
+        .widget_archive ul li span span,
+        .recent-recipes .media-body h3 a:hover,
+        .rc-sidebar .opening-schedule li span.os-close{
+            color: #e7272d;
+        }
+
+        body {
+            font-family: Roboto Slab, sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        h1 {
+            font-family: Oswald;
+            font-size: 40px;
+            line-height: 44px;
+        }
+        h2 {
+            font-family: Oswald, sans-serif;
+            font-size: 28px;
+            line-height: 31px;
+        }
+        h3 {
+            font-family: Oswald, sans-serif;
+            font-size: 20px;
+            line-height: 26px;
+        }
+        h4 {
+            font-family: Oswald, sans-serif;
+            font-size: 16px;
+            line-height: 18px;
+        }
+        h5 {
+            font-family: Oswald, sans-serif;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        h6 {
+            font-family: Oswald, sans-serif;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        .content-area {
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
+        .ls-bar-timer {
+            background-color: #e7272d;
+            border-bottom-color: #e7272d;
+        }
+        .rt-wpls .wpls-carousel .slick-prev,
+        .rt-wpls .wpls-carousel .slick-next {
+            background-color: #e7272d;
+        }
+        .food-menu-title span i:before,
+        .fmp-layout-custom-grid-by-cat1 .card-menu-price
+        .fmp-layout-custom-grid-by-cat2 .amount,
+        .fmp-layout-custom-grid-by-cat2 .fmp-price,
+        .fmp-layout-custom-grid-by-cat3 .card-menu-price .amount,
+        .fmp-layout-custom-grid-by-cat3 .card-menu-price,
+        .tasty-menu-inner ul li .media-body .amount,
+        .tasty-menu-inner ul li .media-body .card-menu-price,
+        .food-menu2-area .food-menu2-box .food-menu2-img-holder .food-menu2-more-holder ul li a,
+        .food-menu2-area .food-menu2-box .food-menu2-img-holder .food-menu2-more-holder ul li a:hover {
+            color: #e7272d !important ;
+        }
+        .fmp-layout-custom-isotope-redchili-2 ul li a:hover{
+            color: #e7272d !important ;
+        }
+        .food-menu-title span:before,
+        .fmp-layout-carousel3 .amount,
+        .food-menu4-area .food-menu4-box span.amount,
+        .single-menu-area .single-menu-inner .related-products .food-menu2-box .food-menu2-title-holder .fmp-price,
+        .fmp-layout-custom-isotope-redchili .isotop-price,
+        .food-menu3-area .food-menu3-box .food-menu3-box-content .food-menu-price,
+        .fmp-layout-carousel3 .fmp-price{
+            background: #e7272d !important;
+        }
+        .food-menu2-area .food-menu2-box .food-menu2-title-holder .isotop-price-2,
+        .fmp-layout-custom-isotope-redchili .isotop-price,
+        .food-menu4-area .food-menu4-box .fmp-price {
+            background-color: #e7272d !important;
+        }
+        .single-menu-area .single-menu-inner .single-menu-inner-content .price{
+            color: #e7272d;
+        }
+        .food-menu-title span:after ,
+        .food-menu3-area .food-menu3-box .food-menu3-box-img a:hover i ,
+        .food-menu3-area .food-menu3-box .food-menu3-box-content .food-menu-price  {
+            background: #e7272d;
+        }
+        .fmp-layout-isotope-redchili-home button {
+            font-family: Oswald, sans-serif;
+        }
+        .food-menu3-area .food-menu3-box .food-menu3-box-content .food-menu-price:after {
+            border-color: transparent #e7272d;
+        }
+        .wrapper .fmp-layout3 .fmp-box .fmp-title h3:hover{
+            color: #e7272d;
+        }
+        .fmp-layout3 .fmp-info h3 a:hover{
+            color: #e7272d;
+        }
+        .fmp-layout-custom-grid-by-cat2 h3.fmp-title a {
+            color: #000000;
+        }
+        .fmp-layout-custom-grid-by-cat2 h3.fmp-title a:hover,
+        .isotope-home h3 a:hover {
+            color: #e7272d;
+        }
+        .fmp-wrapper .fmp-title h3 a:hover{
+            color: #e7272d !important;
+        }
+        .food-menu1-area .food-menu1-box ul li .media-body h3 a:hover,
+        .tasty-menu-inner ul li .media-body h3 a:hover{
+            color: #e7272d !important;
+        }
+        .other-menu .owl-custom-nav .owl-prev,
+        .other-menu .owl-custom-nav .owl-next,
+        .rt-owl-nav-3 .owl-custom-nav .owl-prev,
+        .rt-owl-nav-3 .owl-custom-nav .owl-next{
+            background-color: #e7272d;
+        }
+        .isotope-home h4 a:hover,
+        .food-menu3-area .food-menu3-box .food-menu3-box-content h3 a:hover {
+            color: #e7272d !important;
+        }
+        .fmp-pagination ul.pagination-list li span,
+        .fmp-pagination ul.pagination-list li a{
+            background: transparent;
+            color:#e7272d !important;
+            border: 1px solid #e7272d !important;
+        }
+        .fmp-pagination ul.pagination-list li.active span,
+        .fmp-pagination ul.pagination-list li span:hover,
+        .fmp-pagination ul.pagination-list li a:hover{
+            background: #e7272d !important;
+            color: #ffffff  !important;
+            border: 1px solid #e7272d !important;
+        }
+        .fmp-layout-carousel3 .fmp-title a.ghost-semi-color-btn{
+            border: 2px solid #e7272d !important;
+        }
+        .fmp .title-bar-small-center::before {
+            background-color: #e7272d !important;
+        }
+        .fmp-layout-carousel3 .owl-nav .owl-prev, .fmp-layout-carousel3 .owl-nav .owl-next, .fmp-layout-carousel3 .owl-controls .owl-dots .active span {
+            border: 1px solid #e7272d !important;
+        }
+        .single-recipe-area .tools-bar li:last-child i,
+        .single-recipe-area .single-recipe-inner .tools-bar li a i,
+        .single-recipe-area .single-recipe-inner .tools-bar li a:hover,
+        .single-recipe-area .single-recipe-inner .tools-bar li span,
+        .single-recipe-area .single-recipe-inner .tools-bar li span,
+        .content-box2 .content-box2-bottom-content-holder h3 a:hover,
+        .recipe-serving i {
+            color: #e7272d;
+        }
+        .single-recipe-area .single-recipe-inner .ingredients-box ul li i{
+            background-color: #e7272d;
+        }
+        .title-recipe:before {
+            background: #e7272d;
+        }
+
+        .owl-controls .owl-prev
+        .owl-controls .owl-next,
+        {
+            border: 1px solid #e7272d;
+        }
+        .owl-controls .owl-next:hover
+        .owl-controls .owl-prev:hover, {
+            background: #e7272d !important;
+        }
+
+        .ghost-btn:hover {
+            background: #e7272d;
+            border: 2px solid #e7272d;
+        }
+        .ghost-color-btn {
+            border: 2px solid #e7272d;
+            color: #e7272d;
+        }
+        .ghost-color-btn-2 {
+            border: 2px solid #e7272d;
+            color: #e7272d;
+        }
+        .ghost-color-btn i {
+            color: #e7272d;
+        }
+        .ghost-color-btn:hover {
+            background: #e7272d;
+        }
+        .ghost-text-color-btn {
+            color: #e7272d;
+        }
+        .ghost-text-color-btn:hover {
+            border: 2px solid #e7272d;
+            background: #e7272d;
+        }
+        .ghost-semi-color-btn:hover {
+            background: #e7272d;
+        }
+
+        .title-bar-small-center:before,
+        .title-bar-big-left-close:before,
+        .title-bar-medium-left:before,
+        .title-bar-small-left:before,
+        .widget-title-bar:before,
+        .rc-sidebar .widget-title-bar:before,
+        .title-bar:after,
+        .title-bar-big-center:before,
+        .title-bar-full-width:before{
+            background: #e7272d;
+        }
+        .title-small a:hover,
+        .subtitle-color {
+            color: #e7272d;
+        }
+        #commentform #submit.ghost-on-hover-btn:hover,
+        .ghost-on-hover-btn:hover,
+        input.ghost-on-hover-btn:hover,
+        .single-recipe-area .ghost-on-hover-btn,
+        .contact-us-right .wpcf7-form-control.ghost-on-hover-btn:hover,
+        input.ghost-on-hover-btn{
+            border: 2px solid #e7272d;
+            color: #e7272d;
+        }
+        .default-btn {
+            background: #e7272d;
+        }
+
+        .table-reservation2-area input.book-now-btn:hover,
+        .book-now-btn:hover {
+            color: #e7272d;
+        }
+        .table-reservation3-area input.book-now-btn:hover,
+        .book-now-btn:hover {
+            color: #e7272d;
+        }
+        .table-reservation1-area .book-now-btn{
+            border: 1px solid #e7272d;
+        }
+
+        #scrollUp:hover i,
+        #scrollUp:focus i {
+            color: #e7272d;
+        }
+        .scrollToTop {
+            background-color: #e7272d;
+        }
+
+
+        .about-one-area .about-one-area-top h2 span {
+            color: #e7272d;
+        }
+        .about-layout-two .about2-top .about2-top-box h2 a:hover,
+        .about-layout-two .about2-top .about2-top-box:hover i:before,
+        .about-layout-two .about2-top .about2-top-box h2 a:hover,
+        .about-layout-two .about2-top .about2-top-box:hover i:before,
+        .about-layout-two .about2-award-box .media a i:before,
+        .about-page-left p span span
+        {
+            color:#e7272d;
+        }
+        .about-page-right .owl-controls .owl-dots .active span{
+            background:#e7272d;
+        }
+        .stylish-input-group .input-group-addon button span,
+        .rc-sidebar .opening-schedule li span.os-close {
+            color:#e7272d;
+        }
+        .about-one-area .title-bar-big-left:before {
+            background: #e7272d;
+        }
+
+        .blog-page-box ul li span,
+        .content-area .entry-blog-post ul li span{
+            color:#e7272d;
+        }
+        .blog-page-box .rc-date,
+        .content-area .entry-blog-post .rc-date,
+        .content-area .single-blog-middle .single-blog-social li:hover {
+            background: #e7272d;
+        }
+        .content-area .single-blog-middle .single-blog-tag ul li a {
+            color: #e7272d;
+        }
+        .content-area .single-blog-middle .single-blog-tag ul li:hover {
+            background: #e7272d;
+            border: 1px solid #e7272d;
+        }
+        .content-area .single-blog-middle .single-blog-social li{
+            border: 1px solid #e7272d;
+        }
+
+        .page-error-area .page-error-top {
+            background: #e7272d;
+        }
+
+        .contact-us-left ul > li > i {
+            color: #e7272d;
+        }
+        .contact-us-left ul > li .contact-social li:hover a {
+            background: #e7272d;
+            border: 1px solid #e7272d;
+        }
+        .single-chef-top-area .single-chef-top-content .skill-area .progress:nth-child(1) .progress-bar ,
+        .single-chef-top-area .single-chef-top-content .skill-area .progress:nth-child(2) .progress-bar ,
+        .single-chef-top-area .single-chef-top-content .skill-area .progress:nth-child(3) .progress-bar ,
+        .single-chef-top-area .single-chef-top-content .skill-area .progress:nth-child(4) .progress-bar ,
+        .single-chef-top-area .single-chef-top-content .skill-area .progress:nth-child(5) .progress-bar {
+            background: #e7272d;
+        }
+        .single-chef-top-area .single-chef-top-content .single-chef-social li a {
+            border: 1px solid #e7272d;
+        }
+        .event-social li:hover a,
+        .single-chef-top-area .single-chef-top-content .single-chef-social li:hover a {
+            border: 1px solid #e7272d;
+            background: #e7272d;
+        }
+        .table-reservation1-area .reservation-form .reservation-input-box i{
+            color: #e7272d;
+        }
+        .testimonial-style-4 .rc-icon-box::before{
+            color: #e7272d;
+        }
+
+        .product-grid-view .woo-shop-top .view-mode ul li:first-child .fa,
+        .product-list-view .woo-shop-top .view-mode ul li:last-child .fa,
+        .woocommerce ul.products li.product h3 a:hover,
+        .woocommerce ul.products li.product .price,
+        .woocommerce .product-thumb-area .product-info ul li a:hover .fa,
+        .woocommerce a.woocommerce-review-link:hover,
+        .woocommerce div.product p.price, .woocommerce div.product span.price,
+        .woocommerce div.product .product-meta a:hover,
+        .woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
+        .woocommerce-message::before,
+        .woocommerce-info::before {
+            color: #e7272d;
+        }
+
+        .woocommerce ul.products li.product .onsale,
+        .woocommerce span.onsale,
+        .woocommerce a.added_to_cart,
+        .woocommerce div.product form.cart .button,
+        .woocommerce #respond input#submit,
+        .woocommerce a.button,
+        .woocommerce button.button,
+        .woocommerce input.button,
+        p.demo_store,
+        .woocommerce #respond input#submit.disabled:hover, .woocommerce #respond input#submit:disabled:hover, .woocommerce #respond input#submit[disabled]:disabled:hover, .woocommerce a.button.disabled:hover, .woocommerce a.button:disabled:hover, .woocommerce a.button[disabled]:disabled:hover, .woocommerce button.button.disabled:hover, .woocommerce button.button:disabled:hover, .woocommerce button.button[disabled]:disabled:hover, .woocommerce input.button.disabled:hover, .woocommerce input.button:disabled:hover, .woocommerce input.button[disabled]:disabled:hover,
+        .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,
+        .woocommerce-account .woocommerce-MyAccount-navigation ul li a {
+            background-color: #e7272d;
+        }
+
+        .woocommerce-message,
+        .woocommerce-info {
+            border-color: #e7272d;
+        }
+
+        .woocommerce .product-thumb-area .overlay {
+            background-color: rgba(231, 39, 45, 0.8);
+        }.rt-owl-dot-1 .owl-theme .owl-dots .owl-dot.active span,
+         .rt-owl-dot-1 .owl-theme .owl-dots .owl-dot:hover span {
+             background-color: #e7272d;
+         }
+        .rt-title-1 .subtitle-color {
+            color: #e7272d;
+        }
+        .chef-area .owl-nav .owl-prev,
+        .chef-area .owl-nav .owl-next,
+        .rt-owl-event-slider .owl-nav .owl-prev,
+        .rt-owl-event-slider .owl-nav .owl-next,
+        .chef-area .owl-controls .owl-dots .active span,
+        .rt-owl-event-slider .owl-controls .owl-dots .active span,
+        .rt-owl-nav-2 .owl-nav .owl-prev,
+        .rt-owl-nav-2 .owl-nav .owl-next{
+            background-color: #e7272d !important;
+        }
+        .chef-area .owl-nav .owl-prev:hover,
+        .chef-area .owl-nav .owl-next:hover,
+        .rt-owl-event-slider .owl-nav .owl-prev:hover,
+        .rt-owl-event-slider .owl-nav .owl-next:hover,
+        .rt-owl-nav-2 .owl-nav .owl-prev:hover,
+        .rt-owl-nav-2 .owl-nav .owl-next:hover{
+            border: 1px solid #e7272d;
+            background-color: transparent !important;
+        }
+        .chef-area .owl-nav .owl-prev:hover i,
+        .chef-area .owl-nav .owl-next:hover i,
+        .rt-owl-nav-2 .owl-nav .owl-prev:hover i,
+        .rt-owl-nav-2 .owl-nav .owl-next:hover i,
+        .rt-owl-event-slider .owl-nav .owl-prev:hover i,
+        .rt-owl-event-slider .owl-nav .owl-next:hover i,
+        .rt-owl-event-slider .content-box2 .content-box2-bottom-content-holder ul li i,
+        .all-event-area .content-box2 .content-box2-bottom-content-holder ul li i,
+        .pagination-area ul li, .woocommerce nav.woocommerce-pagination ul li {
+            color: #e7272d !important;
+        }
+        .chef-box .chef-box-content,
+        .chef-box .chef-box-content ul li:hover {
+            background: #e7272d;
+        }
+        .chef-box .chef-box-content h3 a:hover {
+            color: #e7272d;
+        }
+        .chef-box .chef-box-content p:before {
+            background: #e7272d;
+        }
+
+        .recipe-of-the-day-area .recipe-of-the-day-box .recipe-of-the-day-content {
+            border: 5px solid #e7272d;
+        }
+        .recipe-of-the-day-area .recipe-of-the-day-box .recipe-of-the-day-content .time-needs li i{
+            color: #e7272d;
+        }
+        .recipe-of-the-day-area .owl-controls .active span {
+            background: #e7272d !important;
+        }
+        .recipe-of-the-day-area .recipe-of-the-day-box .recipe-of-the-day-content .awards-box ul li a i {
+            color: #e7272d;
+        }
+        .recipe-of-the-day-area .owl-prev i,
+        .recipe-of-the-day-area .owl-next i{
+            color:#e7272d;
+        }
+        .recipe-of-the-day-area .recipe-of-the-day-box .recipe-of-the-day-content h2 a:hover {
+            color: #e7272d;
+        }
+        .fmp-layout-custom-grid-by-cat7 .menu-list li .food-menu-price table th:last-child ,
+        .fmp-layout-custom-grid-by-cat7 .menu-list li .food-menu-price table td:last-child ,
+        .fmp-layout-custom-grid-by-cat2 .menu-list li .food-menu-price table th:last-child ,
+        .fmp-layout-custom-grid-by-cat2 .menu-list li .food-menu-price table td:last-child {
+            color: #e7272d;
+        }
+        .content-box2 .content-box2-img-holder:after{
+            background-color: rgba(231, 39, 45, 0.8);
+        }
+        .content-box2 .content-box2-bottom-content-holder ul li a:hover,
+        .content-box2 .content-box2-bottom-content-holder ul li a i {
+            color: #e7272d;
+        }
+        .rt-owl-testimonial-2 .rt-vc-content,
+        .owl-theme .owl-controls .owl-prev,
+        .owl-theme .owl-controls .owl-next,
+        .chef-box .chef-sep {
+            border-color: #e7272d;
+        }
+        .event-social li a{
+            border: 1px solid #e7272d;
+        }
+        .event-mark {
+            border-bottom: 35px solid #e7272d;
+        }
+        .client-reviews-area .client-reviews-right h2,
+        .event-info ul li i{
+            color: #e7272d;
+        }
+
+        .counter-right-1 i,
+        .award1-area-box i,
+        .about2-award-box .icon-part i{
+            color: #e7272d;
+        }
+
+        .fmp-layout-carousel3 .owl-nav .owl-prev,
+        .fmp-layout-carousel3 .owl-nav .owl-next,
+        .fmp-layout-carousel3 .owl-controls .owl-dots .active span {
+            background-color: #e7272d !important;
+        }
+        .fmp-layout-carousel3 .owl-nav .owl-prev:hover,
+        .fmp-layout-carousel3 .owl-nav .owl-next:hover{
+            border: 1px solid #e7272d;
+            background-color: transparent !important;
+        }
+        .fmp-layout-carousel3 .owl-nav .owl-prev:hover i,
+        .fmp-layout-carousel3 .owl-nav .owl-next:hover i {
+            color: #e7272d !important;
+        }
+        .fmp-isotope-buttons button:hover ,
+        .fmp-isotope-buttons button.selected {
+            border: 1px solid #e7272d;
+            background-color: #e7272d;
+        }
+        .infobox-style1-right h2 a:hover{
+            color: #e7272d !important;
+        }
+        .info-box-1 i ,
+        .infobox-style2 i {
+            color: #e7272d;
+        }
+        .client-area .owl-controls .owl-dot:hover span {
+            background: rgba(231, 39, 45, 0.5) !important;
+        }
+        .wfmc-area .wfmc-layout-1 .fmp-price,
+        .client-area .owl-controls .active span {
+            background: #e7272d !important;
+        }
+        .wfmc-info-1 .wfmc-title a:hover {
+            color: #e7272d;
+        }
+        .wfmc-info-1 .title-bar-small-center:before {
+            background-color: #e7272d;
+        }
+        .wfmc-info-1 .button.add_to_cart_button {
+            border: 2px solid #e7272d;
+        }
+        .wfmc-info-1 .button.add_to_cart_button:hover {
+            background-color: #e7272d;
+        }
+        .wfmc-area .owl-controls .owl-dots .active span {
+            background-color: #e7272d;
+        }
+        .wfmc-area .owl-nav .owl-prev {
+            border: 1px solid #e7272d;
+        }
+        .wfmc-area .owl-nav .owl-next {
+            border: 1px solid #e7272d;
+        }
+        .wfmc-area .single_add_to_cart_button ,
+        .wfmc-area .isotope-variable ,
+        .wfmc-area .ajax_add_to_cart.add_to_cart_button {
+            border: 2px solid #e7272d;
+        }
+        .wfmc-area .single_add_to_cart_button:hover,
+        .wfmc-area .isotope-variable:hover,
+        .wfmc-area .ajax_add_to_cart.add_to_cart_button:hover {
+            background-color: #e7272d;
+        }
+        .wfmc-area .variations label {
+            color: #e7272d;
+        }
+        .wfmc-area .modal-dialog .single_add_to_cart_button.button.alt {
+            border-color: #e7272d;
+            color: #e7272d;
+        }
+        #inner-isotope .fmp-iso-filter  .current {
+            background: #e7272d;
+        }
+        #inner-isotope .single_add_to_cart_button ,
+        #inner-isotope .isotope-variable ,
+        #inner-isotope .ajax_add_to_cart.add_to_cart_button {
+            border: 2px solid #e7272d;
+            color: #e7272d;
+        }
+        #inner-isotope .single_add_to_cart_button:hover,
+        #inner-isotope .isotope-variable:hover,
+        #inner-isotope .ajax_add_to_cart.add_to_cart_button:hover {
+            background-color: #e7272d;
+        }
+        #inner-isotope .variations label {
+            color: #e7272d;
+        }
+        .wfmc-layout-3 .single_add_to_cart_button ,
+        .wfmc-layout-3 .isotope-variable,
+        .wfmc-layout-3 .ajax_add_to_cart.add_to_cart_button {
+            border: 2px solid #e7272d;
+            color: #e7272d;
+        }
+        .wfmc-layout-3 .single_add_to_cart_button:hover,
+        .wfmc-layout-3 .isotope-variable:hover,
+        .wfmc-layout-3 .ajax_add_to_cart.add_to_cart_button:hover {
+            background-color: #e7272d;
+            border: 2px solid #e7272d;
+        }
+        .wfmc-layout-3 .variations label {
+            color: #e7272d;
+        }
+        .wfmc-layout-3 .rt-menu-price .woocommerce-Price-amount {
+            background-color: #e7272d;
+        }
+        .wfmc-layout-3 .input-text.qty.text {
+            border: 2px solid #e7272d;
+        }body{
+             margin: 0 auto;
+         }
+        .mean-container .mean-bar {
+            width: 100%;
+            position: relative;
+            background: #d22727;
+            padding: 4px 0;
+            min-height: 42px;
+            z-index: 999999;
+            border-bottom: 2px solid #fff;
+        }
+
+        .mean-container a.meanmenu-reveal, .mean-container .mean-nav ul li a.mean-expand {
+            color: #fff;
+        }
+        .mean-container a.meanmenu-reveal span {
+            background-color: #fff;
+        }
+        .trheader.stickh .header-area {
+            background: #E7272D;
+        }
+        .site-header .search-box .search-button i, .scrollToTop:after {
+            color: #f7f7f7 !important;
+        }
+        .menu-main-menu-container .menu-main-menu ul li a {
+            color: #fff !important;
+        }
+        .trheader #tophead, .trheader #tophead a, .trheader #tophead .tophead-social li a {
+            color: #fff;
+            background-color: #000;
+        }
+        .header-area {
+            background: #E7272D;
+
+        }
+        .site-header .main-navigation ul li a {
+            font-family: Oswald, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #fff;
+            font-style: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .site-header .main-navigation ul.menu &gt; li &gt; a:hover, .site-header .main-navigation ul.menu &gt; li.current-menu-item &gt; a, .site-header .main-navigation ul.menu &gt; li.current &gt; a, .trheader.non-stick .site-header .main-navigation ul.menu &gt; li &gt; a:hover, .trheader.non-stick .site-header .main-navigation ul.menu &gt; li.current-menu-item &gt; a, .trheader.non-stick .site-header .main-navigation ul.menu &gt; li.current &gt; a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     .vc_custom_1496996398698 {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                         padding-top: 53px !important;
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     }
+
+
+
+        }
+
+        .trheader .header-area
+        h2 {
+            font-family: Oswald, sans-serif;
+            font-size: 28px;
+            line-height: 31px;
+            color: #000;
+        }
+        .wpb_single_image img:hover {
+            -webkit-transform: scale(.9);
+            -ms-transform: scale(.9);
+            transform: scale(.9);
+            transition: all ease-in .5s;
+            border: 3px solid #fff;
+        }
+        .entry-banner {
+            background: url(assets/img/banner.jpg) no-repeat scroll center center / cover;
+            height: 120px;}
+        .inner-page-banner-area .pagination-area {
+            position: relative;
+            z-index: 1;
+            text-align: left;
+            padding: 5px;
+        }
+        .header-icon-seperator{
+            visibility:hidden;
+        }
+        .fa-shopping-cart{
+            visibility:hidden;
+        }
+        .cart-icon-num{
+            visibility:hidden;
+        }
+    </style>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1491372824650{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;background-image: url(assets/img/about1-bottom-back.png?id=337) !important;}.vc_custom_1497343404300{padding-top: 70px !important;padding-bottom: 70px !important;background-position: 0 0;background-repeat:-repeat;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<body class="page-template-default page page-id-320 wls_gecko wls_windows header-style-1 has-topbar topbar-style-1 no-sidebar product-grid-view mprm-checkout mprm-page mprm-success mprm-failed-transaction wpb-js-composer js-comp-ver-5.4.5 vc_responsive">
+<div class="wrapper">
+    <?php include 'header.php' ?>
+    <div id="meanmenu"></div>
+    <div id="header-area-space"></div>
+    <div class="inner-page-banner-area entry-banner">
+        <div class="container">
+            <div class="pagination-area">
+                <h1>Menu</h1>
+                <div class="redchili-pagination"><!-- Breadcrumb NavXT 6.0.4 -->
+                    <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Aangon." href="index.php" class="home"><span property="name">Aangon</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name">Menu</span><meta property="position" content="2"></span></div>							</div>
+        </div>
+    </div>
+    <div class="content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="page-section">
+                        <?php
+                        $sqlCategory = "SELECT product_category_id,product_category_name FROM tbl_product_category WHERE product_category_id = $product_category";
+                        $resultCategory = mysqli_query($con, $sqlCategory);
+                        if ($resultCategory) {
+                            $productListCategory = mysqli_fetch_object($resultCategory);
+                        }
+                        ?>
+                        <h1 class="page-title"><?php echo $productListCategory->product_category_name; ?></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- starter -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="box_style_1">
+                        <ul id="cat_nav">
+                            <?php $sql2 = "SELECT * FROM tbl_product_category WHERE product_category_parent_id='$product_category'";
+                            $array = array();
+                            $result = mysqli_query($con, $sql2);
+                            while ($categoryList = mysqli_fetch_object($result)) {
+                                $array[] = $categoryList;
+                            }
+                            ?>
+                            <?php foreach ($array AS $categoryList): ?>
+                                <li><a href="#<?php echo $categoryList->product_category_name; ?>" class="active" style="text-transform: capitalize;"><?php echo $categoryList->product_category_name; ?></a></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 mb40">
+                    <?php foreach ($array AS $categoryList): ?>
+                        <div class="menu-block" id="<?php echo $categoryList->product_category_name; ?>">
+                            <h3 class="menu-title"><?php echo $categoryList->product_category_name; ?></h3>
+                            <?php $product_category = $categoryList->product_category_id; ?>
+                            <?php
+                            $array = array();
+                            $sql = "SELECT * FROM tbl_product WHERE product_status='Active' AND product_category_id = $product_category ORDER BY product_id";
+                            $result = mysqli_query($con, $sql);
+                            $total = mysqli_num_rows($result);
+                            $adjacents = 6;
+                            $targetpage = "menu.php";
+                            $limit = 20;
+                            if (isset($_GET['page'])) {
+                                $page = $_GET['page'];
+                            } else {
+                                $page = 0;
+                            }
+                            if ($page) {
+                                $start = ($page - 1) * $limit;
+                            } else {
+                                $start = 0;
+                            }
+                            if ($page == 0) {
+                                $page = 1;
+                            }
+                            $prev = $page - 1;
+                            $next = $page + 1;
+                            $lastpage = ceil($total / $limit);
+                            $lpm1 = $lastpage - 1;
+                            $sql2 = "SELECT * FROM tbl_product WHERE product_status='Active' AND product_category_id = $product_category ORDER BY product_id DESC LIMIT $start ,$limit";
+                            $sql_query = mysqli_query($con, $sql2);
+                            while ($productList = mysqli_fetch_object($sql_query)) {
+                                $array[] = $productList;
+                            }
+                            /* CREATE THE PAGINATION */
+                            $counter = '';
+                            $pagination = "";
+                            if ($lastpage > 1) {
+                                $pagination .= "<ul class='pagination pagination-sm'>";
+                                if ($page > $counter + 1) {
+                                    $pagination .= "<li><a href=\"$targetpage?page=$prev&id=$product_category\">Prev</a></li>";
+                                }
+                                if ($lastpage < 7 + ($adjacents * 2)) {
+                                    for ($counter = 1; $counter <= $lastpage; $counter++) {
+                                        if ($counter == $page) {
+                                            $pagination .= "<li class='active'><a href='#'>$counter</a></li>";
+                                        } else {
+                                            $pagination .= "<li><a href=\"$targetpage?page=$counter&id=$product_category\">$counter</a></li>";
+                                        }
+                                    }
+                                } elseif ($lastpage > 5 + ($adjacents * 2)) {
+                                    if ($page < 1 + ($adjacents * 2)) {
+                                        for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++) {
+                                            if ($counter == $page)
+                                                $pagination .= "<li class='active'><a href='#' >$counter</a></li>";
+                                            else
+                                                $pagination .= "<li><a href=\"$targetpage?page=$counter\">$counter</a></li>";
+                                        }
+                                        $pagination .= "<li></li>";
+                                        $pagination .= "<li><a href=\"$targetpage?page=$lpm1\">$lpm1</a></li>";
+                                        $pagination .= "<li><a href=\"$targetpage?page=$lastpage\">$lastpage</a></li>";
+                                    }
+                                    elseif ($lastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2)) {
+                                        $pagination .= "<li><a href=\"$targetpage?page=1\">1</a></li>";
+                                        $pagination .= "<li><a href=\"$targetpage?page=2\">2</a></li>";
+                                        $pagination .= "<li></li>";
+                                        for ($counter = $page - $adjacents; $counter <= $page + $adjacents; $counter++) {
+                                            if ($counter == $page) {
+                                                $pagination .= "<li class='active'><a href='#'>$counter</a></li>";
+                                            } else {
+                                                $pagination .= "<li><a href=\"$targetpage?page=$counter\">$counter</a></li>";
+                                            }
+                                        }
+                                        $pagination .= "<li></li>";
+                                        $pagination .= "<li><a href=\"$targetpage?page=$lpm1\">$lpm1</a></li>";
+                                        $pagination .= "<li><a href=\"$targetpage?page=$lastpage\">$lastpage</a></li>";
+                                    } else {
+                                        $pagination .= "<li><a href=\"$targetpage?page=1\">1</a></li>";
+                                        $pagination .= "<li><a href=\"$targetpage?page=2\">2</a></li>";
+                                        $pagination .= "<li></li>";
+                                        for ($counter = $lastpage - (2 + ($adjacents * 2)); $counter <= $lastpage; $counter++) {
+                                            if ($counter == $page) {
+                                                $pagination .= "<li class='active'><a href='#'>$counter</a></li>";
+                                            } else {
+                                                $pagination .= "<li><a href=\"$targetpage?page=$counter\">$counter</a></li>";
+                                            }
+                                        }
+                                    }
+                                }
+                                if ($page < $counter - 1) {
+                                    $pagination .= "<li><a href=\"$targetpage?page=$next&id=$product_category\">Next</a></li>";
+                                } else {
+                                    $pagination .= "";
+                                    $pagination .= "</ul>\n";
+                                }
+                            }
+                            ?>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <?php if ($array > 0): ?>
+                                        <?php foreach ($array AS $productList): ?>
+                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                <div class="dish-img"><img src="upload/menu_image/<?php echo $productList->product_image; ?>" alt="<?php echo $productList->product_title; ?>" class="img-circle"></div>
+                                            </div>
+                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                <div class="dish-content">
+                                                    <h5 class="dish-title"><?php echo $productList->product_title; ?></h5>
+                                                    <p class="dish-meta"><?php echo $productList->product_details; ?></p>
+                                                    <div class="dish-price">
+                                                        <p>£<?php echo $productList->product_new_price; ?></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <h3>Oops! Still no product's updated in this Category. Product will be updated soon <i class="fa fa-smile-o"></i> </h3>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php include 'footer.php' ?>
+</div>
+<a href="#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
+<script type='text/javascript' src='assets/js/jquery-2.2.4.min.js'></script>
+<script type='text/javascript' src='assets/js/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='assets/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='assets/js/jquery.meanmenu.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/jquery.nav.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/isotope.pkgd.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/jquery.counterup.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/waypoints.min.js?ver=5.4.5'></script>
+<script type='text/javascript' src='assets/js/jquery.datetimepicker.full.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/main.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/js_composer_front.min.js?ver=5.4.5'></script>
+<script type='text/javascript' src='assets/js/custom_script.js'></script>
+</body>
+</html>

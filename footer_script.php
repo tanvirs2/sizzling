@@ -1,11 +1,8 @@
-<script src="js/vendor/jquery-1.12.0.min.js"></script>
-<script src="js/vendor/modernizr-2.8.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/main.js"></script>
-<script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script type="text/javascript">
     var baseUrl = '<?php echo baseUrl(); ?>';
+    $(window).load(function() {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");;
+    });
 </script>

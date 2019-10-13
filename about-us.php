@@ -2,233 +2,99 @@
 include './config/config.php';
 ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About Us || <?php echo $config['SITE_NAME']; ?></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- All css files are included here. -->
-    <?php include "header_script.php"; ?>
-    <!-- Modernizr JS -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
+    <title>About &#8211; Sizzling</title>
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/meanmenu.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/default.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/vc.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/layerslider.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/mp-restaurant-menu.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='assets/css/js_composer.min.css' type='text/css' media='all' />
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link rel='stylesheet' id='owl-carousel-css'  href='assets/css/owl.carousel.min.css' type='text/css' media='all' />
+    <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1491372824650{margin-top: 0px !important;margin-bottom: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;background-image: url(assets/img/about1-bottom-back.png?id=337) !important;}.vc_custom_1497343404300{padding-top: 70px !important;padding-bottom: 70px !important;background-position: 0 0;background-repeat:-repeat;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<body class="page-template-default page page-id-320 wls_gecko wls_windows header-style-1 has-topbar topbar-style-1 no-sidebar product-grid-view mprm-checkout mprm-page mprm-success mprm-failed-transaction wpb-js-composer js-comp-ver-5.4.5 vc_responsive">
+<div class="wrapper">
+    <?php include 'header.php' ?>
+    <div id="meanmenu"></div>
+    <!--    <div id="header-area-space"></div>-->
+    <div class="inner-page-banner-area entry-banner">
+        <div class="container">
+            <div class="pagination-area">
+                <h1>About</h1>
+                <div class="redchili-pagination"><!-- Breadcrumb NavXT 6.0.4 -->
+                    <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Aangon." href="index.php" class="home"><span property="name">Sizzling</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name">About</span><meta property="position" content="2"></span></div>							</div>
+        </div>
+    </div>
+    <div class="content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <article id="post-320" class="post-320 page type-page status-publish hentry">
+                        <div class="entry-content">
+                            <div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="about-page-area">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                        <div class="about-page-left">
+                                                            <h2 style="color:#222222; font-size:20px;">Best Restaurant &amp; Takeaway in Chadwell heath lane, Romford</h2>
+                                                            <p>We sell peri-peri chicken, hot wings, Taste burgers, and Fish and chips. Our Recipe is unique and the taste is different than others.
+                                                                <br>Come and try our yummy food.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                        <div class="about-page-right">
+                                                            <div class="rt-owl-carousel" data-carousel-options="{&quot;nav&quot;:false,&quot;navText&quot;:[&quot;&lt;i class=&#039;fa fa-angle-left&#039;&gt;&lt;\/i&gt;&quot;,&quot;&lt;i class=&#039;fa fa-angle-right&#039;&gt;&lt;\/i&gt;&quot;],&quot;dots&quot;:true,&quot;autoplay&quot;:true,&quot;autoplayTimeout&quot;:&quot;5000&quot;,&quot;autoplaySpeed&quot;:&quot;200&quot;,&quot;autoplayHoverPause&quot;:true,&quot;loop&quot;:true,&quot;margin&quot;:20,&quot;responsive&quot;:[{&quot;items&quot;:1}]}">
+                                                                <div class="about-page-img-holder">
+                                                                    <img src="assets/img/about/about-1.jpg" class="img-responsive" alt="Best Indian Restaurant &amp; Takeaway in Black Bourton Road Carterton OX18 3DN">
+                                                                </div>
+                                                                <div class="about-page-img-holder">
+                                                                    <img src="assets/img/about/about-2.jpg" class="img-responsive" alt="Best Indian Restaurant &amp; Takeaway in Black Bourton Road Carterton OX18 3DN">
+                                                                </div>
+                                                                <div class="about-page-img-holder">
+                                                                    <img src="assets/img/about/about-3.jpg" class="img-responsive" alt="Best Indian Restaurant &amp; Takeaway in Black Bourton Road Carterton OX18 3DN">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div></div></div></div></div>
 
-<body>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
-<!-- Body main wrapper start -->
-<div class="wrapper fixed__footer">
-    <?php include "header.php"; ?>
-    <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat scroll center center / cover ;">
-        <div class="ht__bradcaump__wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="bradcaump__inner text-center">
-                            <h2 class="bradcaump-title">About Us</h2>
-                            <nav class="bradcaump-inner">
-                                <a class="breadcrumb-item" href="index">Home</a>
-                                <span class="brd-separetor">/</span>
-                                <span class="breadcrumb-item active">About Us</span>
-                            </nav>
+                            <div class="vc_row-full-width vc_clearfix"></div>
                         </div>
-                    </div>
-                </div>
+                    </article>									            </div>
             </div>
         </div>
     </div>
-    <!-- End Bradcaump area -->
-    <!-- Start Our Store Area -->
-    <section class="htc__store__area ptb--120 bg__white">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section__title section__title--2 text-center">
-                        <h2 class="title__line">Welcome To Sizzling</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                        </p>
-                    </div>
-                    <div class="store__btn">
-                        <a href="contact-us">contact us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Our Store Area -->
-    <!-- Start Choose Us Area -->
-    <section class="htc__choose__us__ares bg__white">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <div class="htc__choose__wrap bg__cat--4">
-                        <h2 class="choose__title">Why Choose Us?</h2>
-                        <div class="choose__container">
-                            <div class="single__chooose">
-                                <div class="choose__us">
-                                    <div class="choose__icon">
-                                        <span class="ti-truck"></span>
-                                    </div>
-                                    <div class="choose__details">
-                                        <h4>Cash On Delivery</h4>
-                                        <p>We provide 'Cash On Delivery' service inside Cumilla & Dhaka.</p>
-                                    </div>
-                                </div>
-                                <div class="choose__us">
-                                    <div class="choose__icon">
-                                        <span class="ti-hear">৳</span>
-                                    </div>
-                                    <div class="choose__details">
-                                        <h4>Affordable Price </h4>
-                                        <p>We try to keep the product price as cheap as possible with quality assurance.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single__chooose">
-                                <div class="choose__us">
-                                    <div class="choose__icon">
-                                        <span class="ti-reload"></span>
-                                    </div>
-                                    <div class="choose__details">
-                                        <h4>Money Back Guarantee</h4>
-                                        <p>If any problem found while receiving you can demand full refund.</p>
-                                    </div>
-                                </div>
-                                <div class="choose__us">
-                                    <div class="choose__icon">
-                                        <span class="ti-time"></span>
-                                    </div>
-                                    <div class="choose__details">
-                                        <h4>Support 24/7</h4>
-                                        <p>We try to be online throughout the day.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Choose Us Area -->
-    <!-- Start Our Team Area -->
-    <section class="htc__team__area bg__white ptb--120">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section__title section__title--2 text-center">
-                        <h2 class="title__line">Our creative team</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="team__wrap clearfix mt--60">
-                    <!-- Start Single Team -->
-                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                        <div class="team foo">
-                            <div class="team__thumb">
-                                <a href="#">
-                                    <img src="images/team/1.jpg" alt="Team Member 01">
-                                </a>
-                            </div>
-                            <div class="team__bg__color"></div>
-                            <div class="team__hover__info">
-                                <div class="team__hover__action">
-                                    <h2><a href="#">Team Member 01</a></h2>
-                                    <ul class="social__icon">
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                        <div class="team foo">
-                            <div class="team__thumb">
-                                <a href="#">
-                                    <img src="images/team/1.jpg" alt="Team Member 01">
-                                </a>
-                            </div>
-                            <div class="team__bg__color"></div>
-                            <div class="team__hover__info">
-                                <div class="team__hover__action">
-                                    <h2><a href="#">Team Member 02</a></h2>
-                                    <ul class="social__icon">
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                        <div class="team foo">
-                            <div class="team__thumb">
-                                <a href="#">
-                                    <img src="images/team/1.jpg" alt="Team Member 01">
-                                </a>
-                            </div>
-                            <div class="team__bg__color"></div>
-                            <div class="team__hover__info">
-                                <div class="team__hover__action">
-                                    <h2><a href="#">Team Member 03</a></h2>
-                                    <ul class="social__icon">
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
-                                        <li><a href="#" target="_blank"><i class="zmdi zmdi-google-plus"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Our Team Area -->
-    <!-- Start brand Area -->
-    <div class="htc__brand__area bg__white ptb--100" style="background-color: #f4f4f4;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 style="text-align: center">Brands we work with</h2>
-                    <ul class="brand__list">
-                        <li><a href="#">
-                                <img src="images/brand/Brand-17-KM-Jewelry.jpg" alt="brand images">
-                            </a></li>
-                        <li><a href="#">
-                                <img src="images/brand/Brand-Inalis.jpg" alt="brand images">
-                            </a></li>
-                        <li><a href="#">
-                                <img src="images/brand/Brand-Naviforce.jpg" alt="brand images">
-                            </a></li>
-                        <li><a href="#">
-                                <img src="images/brand/Brand-Curren.jpg" alt="brand images">
-                            </a></li>
-                        <li class="hidden-sm"><a href="#">
-                                <img src="images/brand/Brand-Sinobi.jpg" alt="brand images">
-                            </a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End brand Area -->
-    <!-- Start Footer Area -->
-    <?php include "footer.php"; ?>
-    <!-- End Footer Area -->
+    <?php include 'footer.php' ?>
 </div>
+<a href="#" class="scrollToTop"><i class="fa fa-arrow-up"></i></a>
+<script>
+    var baseUrl = '<?php echo baseUrl(); ?>';
+</script>
+<script type='text/javascript' src='assets/js/jquery-2.2.4.min.js'></script>
+<script type='text/javascript' src='assets/js/jquery-migrate.min.js'></script>
+<link rel='stylesheet' id='owl-theme-default-css'  href='assets/css/owl.theme.default.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='assets/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='assets/js/jquery.meanmenu.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/jquery.nav.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/isotope.pkgd.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/jquery.counterup.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/waypoints.min.js?ver=5.4.5'></script>
+<script type='text/javascript' src='assets/js/jquery.datetimepicker.full.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/main.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/js_composer_front.min.js?ver=5.4.5'></script>
+<script type='text/javascript' src='assets/js/owl.carousel.min.js?ver=2.3'></script>
+<script type='text/javascript' src='assets/js/custom_script.js'></script>
 <?php include "footer_script.php"; ?>
 </body>
-
 </html>

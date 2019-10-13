@@ -1,7 +1,7 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
-include '../../config/config.php';
+include '../config/config.php';
 $return_array = array();
 $newQuantity = '';
 $itemID = '';

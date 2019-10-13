@@ -13,7 +13,6 @@ if (isset($_POST['btnAddBanner'])) {
     $banner_image = validateInput($banner_image);
     $banner_status = validateInput($banner_status);
 
-
     if ($banner_status === '0') {
         $error = "Please select status";
     } else {
@@ -125,24 +124,9 @@ if ($resultGetProductCategory) {
                                         <label for="banner_image">Banner Image&nbsp;&nbsp;<span style="color:red;">*</span></label>
                                         <input type="file" name="banner_image" id="banner_image" required="required" />
                                     </div>
-                                    <div class="form-group">
-                                        <label for="banner_link">Banner Link &nbsp;&nbsp;<span style="color:red;">*</span></label>
-                                        <select id="banner_link" name="banner_link" class="form-control">
-                                            <option value="">Select Category</option>
-                                            <?php
-                                            $sqlGetProductCategory = "SELECT product_category_id,product_category_name FROM tbl_product_category WHERE product_category_status='Active'";
-                                            $resultGetProductCategory = mysqli_query($con, $sqlGetProductCategory);
-                                            ?>
-                                            <?php if (count($resultGetProductCategory) > 0): ?>
-                                                <?php while ($objProductCategory = mysqli_fetch_object($resultGetProductCategory)): ?>
-                                                    <option value="<?php echo $objProductCategory->product_category_id; ?>"><?php echo $objProductCategory->product_category_name; ?></option>
-                                                <?php endwhile; ?>
-                                            <?php endif; ?>
-                                        </select>
-                                    </div>
                                     <button type="submit" name="btnAddBanner" class="btn btn-success">Submit</button>
                                 </form>
-                                <p>N.B.: Use 1920*800 dimension for best banner showcase</p>
+                                <p>N.B.: Use 1920*880 dimension for best banner showcase</p>
                             </div>
                         </div>
                     </div>
@@ -156,7 +140,6 @@ if ($resultGetProductCategory) {
                                         <tr>
                                             <th style="width: 30%;">Banner Title</th>
                                             <th style="width: 30%;">Image</th>
-                                            <th style="width: 30%;">Link</th>
                                             <th style="width: 20%;">Status</th>
                                             <th style="width: 20%;">Action</th>
                                         </tr>
@@ -175,17 +158,6 @@ if ($resultGetProductCategory) {
                                                 <td style="width: 30%;"><?php echo $obj->banner_title; ?></td>
                                                 <td style="width: 30%;">
                                                     <img class="img-responsive" src="<?php echo baseUrl('upload/banner/'); ?><?php echo $obj->banner_image; ?>" style="width: 50%;">
-                                                </td>
-                                                <td>
-                                                    <?php if (count($arrayProductCategory) > 0): ?>
-                                                        <?php foreach ($arrayProductCategory AS $productCategory): ?>
-                                                            <?php
-                                                            if ($productCategory->product_category_id == $obj->banner_link) {
-                                                                echo $productCategory->product_category_name;
-                                                            }
-                                                            ?>
-                                                        <?php endforeach; ?>
-                                                    <?php endif; ?>
                                                 </td>
                                                 <td style="width: 20%;">
                                                     <?php if ($obj->banner_status == 'Active'): ?>
